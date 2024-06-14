@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import {cn} from "@/lib/utils";
 import {Navbar} from "@/components/navigation/navbar";
+import {ThemeProvider} from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,8 +23,16 @@ export default function RootLayout({
           "relative text-muted-foreground overflow-x-hidden",
           inter.className)}
       >
-      <Navbar/>
-      {children}</body>
+      <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+      >
+        <Navbar/>
+        {children}
+      </ThemeProvider>
+      </body>
     </html>
   );
 }
