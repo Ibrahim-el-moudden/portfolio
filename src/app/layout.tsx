@@ -5,6 +5,7 @@ import {cn} from "@/lib/utils";
 import {Navbar} from "@/components/navigation/navbar";
 import {ThemeProvider} from "@/components/theme-provider";
 import {MobileNav} from "@/components/navigation/mobile-nav";
+import {Footer} from "@/components/navigation/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
           <Navbar/>
           <MobileNav/>
           {children}
+          <Footer/>
       </ThemeProvider>
       </body>
     </html>
