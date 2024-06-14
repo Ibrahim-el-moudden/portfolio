@@ -4,6 +4,7 @@ import "./globals.css";
 import {cn} from "@/lib/utils";
 import {Navbar} from "@/components/navigation/navbar";
 import {ThemeProvider} from "@/components/theme-provider";
+import {MobileNav} from "@/components/navigation/mobile-nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,8 +30,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
       >
-        <Navbar/>
-        {children}
+          <Navbar/>
+          <MobileNav/>
+          {children}
       </ThemeProvider>
       </body>
     </html>
