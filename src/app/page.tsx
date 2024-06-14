@@ -1,13 +1,19 @@
-
-import {Button} from "@/components/ui/button";
+import {HomeSection} from "@/containers/home";
+import {AboutSection} from "@/containers/about";
+import {SkillsSection} from "@/containers/skills";
+import {ProjectsSection} from "@/containers/projects";
+import {ContactSection} from "@/containers/contact";
 
 export default function Home() {
   return (
       <>
-      <br/><br/><br/><br/><br/><br/><br/>
-
-      <Button>test button</Button>
-          <br/><br/><br/>
+          <div className="container space-y-16 py-28">
+              <HomeSection/>
+              <AboutSection/>
+              <SkillsSection/>
+              <ProjectsSection/>
+              <ContactSection/>
+          </div>
       </>
   );
 }
