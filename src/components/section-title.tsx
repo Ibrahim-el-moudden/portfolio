@@ -6,7 +6,7 @@ interface SectionTitleProps extends React.HTMLAttributes<HTMLDivElement> {
     description: string;
 }
 
-export function SectionTitle({title, description, className, ...props} : FC<SectionTitleProps>)  {
+export const SectionTitle: FC<SectionTitleProps> = ({title, description, className, ...props} ) => {
 
     return (
         <div

@@ -1,5 +1,5 @@
 import { Project } from "@/types/interfaces";
-import { client } from "/sanity/lib/client";
+import { client } from "../../sanity/lib/client";
 
 export async function getProjects() {
     const query = `

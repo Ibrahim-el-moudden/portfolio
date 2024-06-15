@@ -7,7 +7,8 @@ interface SkillsContainerProps {
     label: string;
 }
 
-export function SkillsContainer({ data, label } : FC<SkillsContainerProps>) {
+export const SkillsContainer: FC<SkillsContainerProps> = (props ) => {
+    const { data, label } = props;
     return (
         <article className="min-h-[25rem] border border-primary rounded-lg">
             <h2 className="capitalize text-primary text-2xl font-semibold py-4 px-6 border-b border-primary">

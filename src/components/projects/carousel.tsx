@@ -1,6 +1,6 @@
 "use client";
 
-import { urlForImage } from "/sanity/lib/image";
+import { urlForImage } from "../../../sanity/lib/image";
 import { Loader } from "lucide-react";
 import Image from "next/image";
 import { FC, Suspense, useState } from "react";
@@ -10,7 +10,8 @@ interface CarouselProps {
     images: sanityImage[];
 }
 
-export function Carousel({ images }: FC<CarouselProps>) {
+export const Carousel: FC<CarouselProps> = (props) => {
+    const { images } = props;
     const [currentImage, setCurrentImage] = useState<string>(
         urlForImage(images[0])
     );

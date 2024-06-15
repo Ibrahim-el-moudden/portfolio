@@ -7,7 +7,7 @@ import {InfoItem} from "./info-item";
 
 import { Project } from "@/types/interfaces";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { urlForImage } from "/sanity/lib/image";
+import { urlForImage } from "../../../sanity/lib/image";
 import { Separator } from "@/components/ui/separator";
 import { buttonVariants } from "@/components/ui/button";
 
@@ -15,7 +15,8 @@ interface ProjectItemProps {
     project: Project;
 }
 
-export function ProjectItem({project} : FC<ProjectItemProps> ) {
+export const ProjectItem: FC<ProjectItemProps> = (props  ) => {
+    const {project} = props;
 
     return (
         <Dialog>

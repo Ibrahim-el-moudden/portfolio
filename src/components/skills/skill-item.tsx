@@ -8,7 +8,8 @@ interface SkillItemProps {
     item: Skill;
 }
 
-export function SkillItem({ item }: FC<SkillItemProps>){
+export const SkillItem: FC<SkillItemProps> = (props) => {
+    const { item } = props;
 
     const [progress, setProgress] = useState<number>(0);
 

@@ -7,7 +7,8 @@ interface InfoItemProps {
     children: React.ReactNode;
 }
 
-export function InfoItem({ icon: Icon, label, children }: FC<InfoItemProps>) {
+export const InfoItem: FC<InfoItemProps> = (props) => {
+    const { icon: Icon, label, children } = props;
     return (
         <div className="grid grid-cols-3 items-start gap-2 capitalize text-sm">
             <div className="flex items-center gap-2">

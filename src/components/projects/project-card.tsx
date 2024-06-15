@@ -6,7 +6,8 @@ interface ProjectCardProps {
     title: string;
 }
 
-export function ProjectCard({ imageUrl, title }: FC<ProjectCardProps>) {
+export const ProjectCard: FC<ProjectCardProps> = (props) => {
+    const { imageUrl, title } = props;
     return (
         <article className="relative group border rounded-md shadow cursor-pointer overflow-hidden">
             <figure className="absolute size-full top-0 left-0 bg-gradient-to-t from-background/70 to-transparent" />
