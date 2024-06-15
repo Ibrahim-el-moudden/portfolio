@@ -29,3 +29,15 @@ export interface TabItem {
     icon: LucideIcon;
     label: string;
 }
+
+export interface Project {
+    _id: string;
+    title: string;
+    description: string;
+    images: any[];
+    tags: string[];
+    demoLink: string;
+    githubLink: string;
+    publishedAt: Date;
+    isResponsive: boolean;
+}

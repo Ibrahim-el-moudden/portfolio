@@ -47,8 +47,11 @@ export default defineType({
             name: "publishedAt",
             type: "date",
             title: "Published At",
+            options: {
+                        dateFormat: "DD-MM-YYYY"
+                    },
             validation: (Rule) =>
-                Rule.min(new Date("2020-09-01").toDateString()).max(
+                Rule.min(new Date("01-09-2020").toDateString()).max(
                     new Date().toDateString()
                 ),
         }),
