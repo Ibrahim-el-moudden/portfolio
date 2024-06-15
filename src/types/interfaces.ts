@@ -9,3 +9,8 @@ export interface SocialLink {
 export interface NavLink extends SocialLink {
     title: string;
 }
+
+export interface Statistic {
+    label: string;
+    value: number;
+}
