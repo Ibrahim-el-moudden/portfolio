@@ -3,6 +3,7 @@ import {AboutSection} from "@/containers/about";
 import {SkillsSection} from "@/containers/skills";
 import {ProjectsSection} from "@/containers/projects";
 import {ContactSection} from "@/containers/contact";
+import {ScrollToTop} from "@/components/scroll-to-top";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
               <SkillsSection/>
               <ProjectsSection/>
               <ContactSection/>
+              <ScrollToTop/>
           </div>
       </>
   );
