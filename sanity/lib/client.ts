@@ -1,13 +1,13 @@
 import "server-only";
 import { createClient, type QueryParams } from "next-sanity";
 
-import {  dataset, projectId } from '../env'
+import {  dataset, projectId, useCdn, apiVersion } from '../env'
 
 export const client = createClient({
   projectId,
   dataset,
-  apiVersion: "2024-01-01",
-  useCdn: false,
+  apiVersion,
+  useCdn,
 })
 
 export async function sanityFetch<QueryResponse>({
