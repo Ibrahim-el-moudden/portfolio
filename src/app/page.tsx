@@ -6,10 +6,12 @@ import {ContactSection} from "@/containers/contact";
 import {ScrollToTop} from "@/components/scroll-to-top";
 import {Navbar} from "@/components/navigation/navbar";
 import {Footer} from "@/components/navigation/footer";
+import {ScrollProgress} from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
       <main className="pt-12">
+          <ScrollProgress/>
           <Navbar/>
           <div className="container space-y-16 py-28">
               <HomeSection/>

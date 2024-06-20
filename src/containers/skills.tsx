@@ -2,14 +2,27 @@ import {SectionTitle} from "@/components/section-title";
 import {SkillsContainer} from "@/components/skills/skills-container";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { tabsItems } from "@/constants/tabs-items";
-import { getSkills } from "@/lib/skills";
+import {client} from "../../sanity/lib/client";
+import {Skill} from "@/types/interfaces";
 
+async function fetchSkills(category: string) {
+    const query = `
+        *[_type == "skills" && category == "${category}"] {
+            _id,
+            label,
+            value,
+            category
+        }
+    `;
+    const data = await client.fetch(query);
+    return data as Skill[];
+}
 
 export async function SkillsSection() {
 
-    const frontendSkills = await getSkills("frontend");
-    const backendSkills = await getSkills("backend");
-    const tools = await getSkills("tools");
+    const frontendSkills = await fetchSkills("frontend");
+    const backendSkills = await fetchSkills("backend");
+    const tools = await fetchSkills("tools");
 
     return (
         <section id="skills" className="relative space-y-6">

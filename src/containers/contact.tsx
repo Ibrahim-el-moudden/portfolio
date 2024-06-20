@@ -12,7 +12,7 @@ export function ContactSection() {
             <SectionTitle title="Get in touch" description="Let's work together" />
             <a href="mailto:elmouddenibrahim@gmail.com" className={buttonVariants({ size: "lg" })}>
                 <Mail className="size-4" />
-                <span>Si hello</span>
+                <span>Sent me a message</span>
             </a>
         </section>
     )
