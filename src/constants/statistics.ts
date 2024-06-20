@@ -1,17 +1,9 @@
-import {Project, Statistic} from "@/types/interfaces";
-import {client} from "../../sanity/lib/client";
+import { Statistic } from "@/types/interfaces";
+import {getProjects} from "@/lib/projects";
 
-async function fetchProjects() {
-    const query = `
-        *[_type == "projects"]
-    `;
-    const data = await client.fetch(query);
-    return data as Project[];
-}
 
 export async function getStatistics() {
-
-    const totalProjects: number = (await fetchProjects()).length;
+    const totalProjects: number = (await getProjects()).length;
 
     const statistics: Statistic[] = [
         {
